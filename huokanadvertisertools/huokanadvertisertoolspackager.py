@@ -1,15 +1,15 @@
+from os import PathLike
 import zipfile
 import io
 from typing import Union
-from pathlib import Path
 
 
 class HuokanAdvertiserToolsPackager:
-    def __init__(self, addon_zip_path: Union[Path, str] = "HuokanAdvertiserTools.zip"):
+    def __init__(self, addon_zip_path: Union[PathLike[str], str]):
         """Creates a copy of Huokan Advertiser Tools which can be customized to have options for specific users.
 
         Args:
-            addon_zip_path (str, optional): Path to the unmodified addon zip file. Defaults to 'HuokanAdvertiserTools.zip'.
+            addon_zip_path (str, optional): Path to the unmodified addon zip file.
         """
         self.addon_zip_path = addon_zip_path
         self.custom_script_lines = ["local _, addon = ...", ""]
