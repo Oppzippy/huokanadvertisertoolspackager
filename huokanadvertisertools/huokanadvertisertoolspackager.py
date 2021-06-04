@@ -42,9 +42,7 @@ class HuokanAdvertiserToolsPackager:
             ["HuokanAdvertiserTools/Custom.lua"]
         )
 
-        with zipfile.ZipFile(
-            custom_copy_bytes, "a", zipfile.ZIP_DEFLATED, compresslevel=9
-        ) as custom_copy_zip:
+        with zipfile.ZipFile(custom_copy_bytes, "a") as custom_copy_zip:
             custom_copy_zip.writestr(
                 "HuokanAdvertiserTools/Custom.lua", self.get_custom_script()
             )
@@ -63,9 +61,7 @@ class HuokanAdvertiserToolsPackager:
         """
         zip_buffer = io.BytesIO()
         with zipfile.ZipFile(self.addon_zip_path, "r") as zip_in:
-            with zipfile.ZipFile(
-                zip_buffer, "w", zipfile.ZIP_DEFLATED, compresslevel=9
-            ) as zip_out:
+            with zipfile.ZipFile(zip_buffer, "w") as zip_out:
                 for item in zip_in.infolist():
                     if item.filename not in blacklist:
                         zip_out.writestr(item, zip_in.read(item.filename))
