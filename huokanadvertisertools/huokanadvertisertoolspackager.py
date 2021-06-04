@@ -52,7 +52,7 @@ class HuokanAdvertiserToolsPackager:
 
         return custom_copy_bytes
 
-    def _create_copy_without_files(self, blacklist: list) -> io.BytesIO:
+    def _create_copy_without_files(self, blacklist: Union[list, set]) -> io.BytesIO:
         """Creates a copy of the addon zip file with the provided files excluded.
 
         Args:
