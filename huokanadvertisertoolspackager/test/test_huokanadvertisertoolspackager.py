@@ -1,7 +1,7 @@
 import unittest
 import zipfile
 import os
-from huokanadvertisertools import HuokanAdvertiserToolsPackager
+from huokanadvertisertoolspackager import HuokanAdvertiserToolsPackager
 
 
 class TestHuokanAdvertiserTools(unittest.TestCase):

@@ -4,7 +4,7 @@ from distutils.core import setup
 import setuptools
 
 setup(
-    name="huokanadvertisertools",
+    name="huokanadvertisertoolspackager",
     version="1.0.0",
     description="Configures and packages the HuokanAdvertiserTools addon",
     author="Oppzippy",
