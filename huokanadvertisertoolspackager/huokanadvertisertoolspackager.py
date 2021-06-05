@@ -32,7 +32,7 @@ class HuokanAdvertiserToolsPackager:
         custom_script = "\n".join(self.custom_script_lines)
         return f"{custom_script}\n"
 
-    def create_customized_addon_zip(self) -> io.BytesIO:
+    def create_addon_zip(self) -> io.BytesIO:
         """Creates a copy of the addon zip file with the Custom.lua script file modified.
 
         Returns:
