@@ -16,5 +16,3 @@ class TestHuokanAdvertiserTools(unittest.TestCase):
             with zipfile.ZipFile(hat_bytes, "r") as zip:
                 content = zip.read("HuokanAdvertiserTools/Custom.lua").decode("utf-8")
                 self.assertIn('addon.discordTag = "name-realm"', content)
-            with open("hat.zip", "wb") as f:
-                f.write(hat_bytes.getvalue())
