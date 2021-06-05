@@ -5,7 +5,7 @@ import setuptools
 
 setup(
     name="huokanadvertisertoolspackager",
-    version="1.0.1",
+    version="1.0.2",
     description="Configures and packages the HuokanAdvertiserTools addon",
     author="Oppzippy",
     author_email="oppzippy@gmail.com",
