@@ -12,7 +12,7 @@ class TestHuokanAdvertiserTools(unittest.TestCase):
             )
         )
         hat.set_discord_tag("name-realm")
-        with hat.create_customized_addon_zip() as hat_bytes:
-            with zipfile.ZipFile(hat_bytes, "r") as zip:
+        with hat.create_customized_addon_zip() as zip_bytes:
+            with zipfile.ZipFile(zip_bytes, "r") as zip:
                 content = zip.read("HuokanAdvertiserTools/Custom.lua").decode("utf-8")
                 self.assertIn('addon.discordTag = "name-realm"', content)
